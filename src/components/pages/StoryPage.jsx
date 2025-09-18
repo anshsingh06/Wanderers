@@ -128,7 +128,7 @@ export default function Stories() {
             <img src={story.image} alt={story.title} className="w-full h-64 object-cover" />
             <h2 className="p-4 font-semibold text-white text-xl">{story.title}</h2>
             <p className="text-white text-sm mb-1 mx-4">{story.desc}</p>
-            <p className="mt-3 text-sm text-white mb-4">By {story.author}</p>
+            <p className="mt-3 text-sm text-gray-300 mb-4 ml-4">By {story.author}</p>
           </div>
         ))}
       </div>
