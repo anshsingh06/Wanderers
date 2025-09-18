@@ -7,7 +7,7 @@ import { Calendar, Mountain, Camera, Users, PlayCircle, ShoppingBag, MapPin } fr
 const HomePage = () => {
     return (
         <div>
-            
+
             {/* Hero section */}
             <section className="relative text-white">
                 <div className="absolute inset-0 bg-cover bg-center opacity-70"
@@ -675,3 +675,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
