@@ -31,8 +31,9 @@ const Head = () => {
           <h1 className="cursor-pointer text-lg font-bold text-green-800">
             WANDERJHARKHAND
           </h1>
-          <p className="text-xs text-gray-500">Discover. Explore. Experience.</p>
+          
         </div>
+        
       </div>
 
       {/* Navigation */}
@@ -50,6 +51,7 @@ const Head = () => {
             {link.name}
           </NavLink>
         ))}
+        
       </nav>
 
       {/* Right Side */}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
+import Head from "../ui/Head";
 
 export default function Stories() {
   const [filter, setFilter] = useState("Newest First");
@@ -74,6 +75,8 @@ export default function Stories() {
   ];
 
   return (
+    <>
+    
     <div className="px-6 lg:px-20 py-10">
       {/* Hero Section */}
       <div className="text-center mb-12">
@@ -171,5 +174,6 @@ export default function Stories() {
         </button>
       </div>
     </div>
+    </>
   );
 }

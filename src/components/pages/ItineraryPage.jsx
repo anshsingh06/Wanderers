@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Footer from "../ui/Footer";
+
 
 export default function ItineraryPage() {
   const [travelers, setTravelers] = useState(2);
@@ -34,6 +36,7 @@ export default function ItineraryPage() {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-white text-green-900 flex flex-col items-center py-12 px-4">
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-4">
@@ -164,5 +167,7 @@ export default function ItineraryPage() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

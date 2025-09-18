@@ -1,10 +1,10 @@
 import React from 'react'
-import Head from '../common/Head'
+import Head from "../ui/Head";
 
 const HiddenGems = () => {
   return (
     <div>
-      <Head/>
+     
           
     </div>
   )

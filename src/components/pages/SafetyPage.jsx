@@ -2,9 +2,12 @@ import React from 'react'
 import { AlertTriangle, Phone, Share2 } from "lucide-react";
 import { MapPin, Users, Cloud, Wind, Droplets, Wifi, BatteryCharging } from "lucide-react";
 import Footer from "../ui/Footer";
+import Head from '../ui/Head';
 
 const SafetyPage = () => {
     return (
+        <>
+       
         <div className="w-full flex flex-col items-center px-6 py-12 bg-white h-full">
             {/* Title Section */}
             <div className="text-center max-w-3xl">
@@ -258,6 +261,7 @@ const SafetyPage = () => {
             </div>
             <Footer/>
         </div>
+         </>
     )
 }
 
