@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.jpg";
 
 const Head = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -7,41 +9,47 @@ const Head = () => {
     setIsPlaying((prev) => !prev);
   };
 
+  // Navigation links config
+  const navLinks = [
+    { name: "Explore", path: "/" },
+    { name: "Itinerary", path: "/itinerary" },
+    { name: "Stories", path: "/stories" },
+    { name: "Hidden Gems", path: "/hidden-gems" },
+    { name: "Safety", path: "/safety" },
+  ];
+
   return (
     <header className="cursor-pointer flex items-center justify-between px-6 py-3 border-b bg-white">
       {/* Logo + Text */}
       <div className="cursor-pointer flex items-center space-x-2">
         <img
-          src="https://img.icons8.com/ios-filled/50/2f855a/marker.png"
-          alt="logo"
-          className="w-8 h-8"
-        />
+            src={logo}
+            alt="WanderJharkhand Logo"
+            className="h-10 w-10 rounded-full object-cover"
+          />
         <div>
-          <h1 className="cursor-pointer text-lg font-bold text-green-800">WANDERJHARKHAND</h1>
+          <h1 className="cursor-pointer text-lg font-bold text-green-800">
+            WANDERJHARKHAND
+          </h1>
           <p className="text-xs text-gray-500">Discover. Explore. Experience.</p>
         </div>
       </div>
 
       {/* Navigation */}
       <nav className="hidden md:flex space-x-8">
-        <a
-          href="#"
-          className="text-orange-600 border-b-2 border-orange-500 pb-1"
-        >
-          Explore
-        </a>
-        <a href="#" className="text-green-700 hover:text-orange-600">
-          Itinerary
-        </a>
-        <a href="#" className="text-green-700 hover:text-orange-600">
-          Stories
-        </a>
-        <a href="#" className="text-green-700 hover:text-orange-600">
-          Hidden Gems
-        </a>
-        <a href="#" className="text-green-700 hover:text-orange-600">
-          Safety
-        </a>
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.name}
+            to={link.path}
+            className={({ isActive }) =>
+              isActive
+                ? "text-orange-600 border-b-2 border-orange-500 pb-1"
+                : "text-green-700 hover:text-orange-600"
+            }
+          >
+            {link.name}
+          </NavLink>
+        ))}
       </nav>
 
       {/* Right Side */}

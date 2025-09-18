@@ -1,13 +1,13 @@
 // src/components/pages/HomePage.jsx
 import React from "react";
-import Head from "../ui/Head";
+import { Link } from "react-router-dom";
 import Footer from "../ui/Footer";
 import { Calendar, Mountain, Camera, Users, PlayCircle, ShoppingBag, MapPin } from "lucide-react";
 
 const HomePage = () => {
     return (
         <div>
-            <Head />
+            
             {/* Hero section */}
             <section className="relative text-white">
                 <div className="absolute inset-0 bg-cover bg-center opacity-70"
