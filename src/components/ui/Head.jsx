@@ -12,9 +12,9 @@ const Head = () => {
   // Navigation links config
   const navLinks = [
     { name: "Explore", path: "/" },
-    { name: "Itinerary", path: "/itinerary" },
-    { name: "Story", path: "/stories" },
-    { name: "Hidden Gems", path: "/hidden-gems" },
+    { name: "Itinerary", path: "/ItineraryPage" },
+    { name: "Story", path: "/StoryPage" },
+    { name: "Hidden Gems", path: "/HiddenGems" },
     { name: "Safety", path: "/safety" },
   ];
 
