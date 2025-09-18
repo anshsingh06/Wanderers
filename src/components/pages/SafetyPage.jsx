@@ -5,7 +5,7 @@ import Footer from "../ui/Footer";
 
 const SafetyPage = () => {
     return (
-        <div className="w-full flex flex-col items-center px-6 py-12 bg-white">
+        <div className="w-full flex flex-col items-center px-6 py-12 bg-white h-full">
             {/* Title Section */}
             <div className="text-center max-w-3xl">
                 <h1 className="text-3xl font-bold text-green-700">
