@@ -5,7 +5,7 @@ import "./App.css";
 import Head from "./components/ui/Head";
 import HomePage from "./components/pages/HomePage";
 import ItineraryPage from "./components/pages/ItineraryPage";
-// import Stories from "./components/pages/Stories";
+import StoryPage from "./components/pages/StoryPage";
 // import HiddenGems from "./components/pages/HiddenGems";
 // import Safety from "./components/pages/Safety";
 
@@ -18,9 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/itinerary" element={<ItineraryPage />} />
-        {/* <Route path="/stories" element={<Stories />} />
-        <Route path="/hidden-gems" element={<HiddenGems />} />
-        <Route path="/safety" element={<Safety />} /> */}
+        <Route path="/stories" element={<StoryPage />} />
       </Routes>
     </Router>
   );

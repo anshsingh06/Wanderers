@@ -13,7 +13,7 @@ const Head = () => {
   const navLinks = [
     { name: "Explore", path: "/" },
     { name: "Itinerary", path: "/itinerary" },
-    { name: "Stories", path: "/stories" },
+    { name: "Story", path: "/stories" },
     { name: "Hidden Gems", path: "/hidden-gems" },
     { name: "Safety", path: "/safety" },
   ];
