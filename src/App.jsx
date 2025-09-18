@@ -7,7 +7,7 @@ import HomePage from "./components/pages/HomePage";
 import ItineraryPage from "./components/pages/ItineraryPage";
 import StoryPage from "./components/pages/StoryPage";
 // import HiddenGems from "./components/pages/HiddenGems";
-// import Safety from "./components/pages/Safety";
+import SafetyPage from "./components/pages/SafetyPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +19,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/itinerary" element={<ItineraryPage />} />
         <Route path="/stories" element={<StoryPage />} />
+        {/* <Route path="/hidden-gems" element={<HiddenGems />} /> */}
+        <Route path="/safety" element={<SafetyPage />} />
       </Routes>
     </Router>
   );
