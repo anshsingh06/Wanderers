@@ -7,7 +7,7 @@ import { Calendar, Mountain, Camera, Users, PlayCircle, ShoppingBag, MapPin } fr
 const HomePage = () => {
     return (
         <div>
-            
+
             {/* Hero section */}
             <section className="relative text-white">
                 <div className="absolute inset-0 bg-cover bg-center opacity-70"
@@ -129,7 +129,9 @@ const HomePage = () => {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                             {/* Card 1 */}
-                            <div className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500  hover:rounded-xl hover:shadow-lg">
+                            <div onClick={()=>{
+                                window.location.href="/ItineraryPage"
+                            }} className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500  hover:rounded-xl hover:shadow-lg">
                                 <Calendar className="w-8 h-8 text-green-700 mb-4" />
                                 <h3 className="font-semibold text-green-800 mb-2">
                                     SMART ITINERARIES
@@ -141,7 +143,9 @@ const HomePage = () => {
                             </div>
 
                             {/* Card 2 */}
-                            <div className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500  hover:rounded-xl hover:shadow-lg">
+                            <div onClick={()=>{
+                                window.location.href="/StoryPage"
+                            }} className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500  hover:rounded-xl hover:shadow-lg">
                                 <Camera className="w-8 h-8 text-orange-500 mb-4" />
                                 <h3 className="font-semibold text-green-800 mb-2">TRAVEL STORIES</h3>
                                 <p className="text-sm text-gray-600">
@@ -151,7 +155,9 @@ const HomePage = () => {
                             </div>
 
                             {/* Card 3 */}
-                            <div className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500 hover:rounded-xl hover:shadow-lg">
+                            <div onClick={()=>{
+                                window.location.href="/HiddenGems"
+                            }} className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500 hover:rounded-xl hover:shadow-lg">
                                 <Mountain className="w-8 h-8 text-yellow-600 mb-4" />
                                 <h3 className="font-semibold text-green-800 mb-2">HIDDEN GEMS</h3>
                                 <p className="text-sm text-gray-600">
@@ -161,7 +167,9 @@ const HomePage = () => {
                             </div>
 
                             {/* Card 4 */}
-                            <div className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500  hover:rounded-xl hover:shadow-lg">
+                            <div onClick={()=>{
+                                window.location.href="/CraftsPage"
+                            }} className="p-6 border rounded-lg hover:cursor-pointer transition transform hover:scale-105 hover:border-orange-500  hover:rounded-xl hover:shadow-lg">
                                 <ShoppingBag className="w-8 h-8 text-brown-600 mb-4" />
                                 <h3 className="font-semibold text-green-800 mb-2">LOCAL CRAFTS</h3>
                                 <p className="text-sm text-gray-600">
@@ -184,7 +192,9 @@ const HomePage = () => {
                                     Discover the most captivating destinations in Jharkhand
                                 </p>
                             </div>
-                            <button className="flex items-center border border-green-600 text-green-700 hover:cursor-pointer hover:bg-green-50 px-4 py-2 rounded-md text-sm font-semibold">
+                            <button onClick={()=>{
+                                window.location.href="/AttractionsPage"
+                            }} className="flex items-center border border-green-600 text-green-700 hover:cursor-pointer hover:bg-green-50 px-4 py-2 rounded-md text-sm font-semibold">
                                 VIEW ALL →
                             </button>
                         </div>
@@ -343,7 +353,9 @@ const HomePage = () => {
                                         Real experiences from travelers and locals
                                     </p>
                                 </div>
-                                <button className="hover:cursor-pointer flex items-center border border-green-600 text-green-700 hover:bg-green-50 px-4 py-2 rounded-md text-sm font-semibold">
+                                <button onClick={()=>{
+                                    window.location.href="/StoryPage"
+                                }} className="hover:cursor-pointer flex items-center border border-green-600 text-green-700 hover:bg-green-50 px-4 py-2 rounded-md text-sm font-semibold">
                                     READ ALL STORIES →
                                 </button>
                             </div>
@@ -558,7 +570,9 @@ const HomePage = () => {
                                 Support local artisans and take home authentic souvenirs
                             </p>
                         </div>
-                        <button className="flex items-center border border-green-700 text-green-700 px-4 py-2 rounded-md hover:bg-green-700 hover:text-white transition hover:cursor-pointer">
+                        <button onClick={()=>{
+                            window.location.href="/CraftsPage"
+                        }} className="flex items-center border border-green-700 text-green-700 px-4 py-2 rounded-md hover:bg-green-700 hover:text-white transition hover:cursor-pointer">
                             SHOP ALL CRAFTS →
                         </button>
                     </div>
