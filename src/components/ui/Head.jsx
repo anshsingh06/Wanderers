@@ -16,6 +16,7 @@ const Head = () => {
     { name: "Story", path: "/stories" },
     { name: "Hidden Gems", path: "/hidden-gems" },
     { name: "Safety", path: "/safety" },
+    { name: "Chatbot", path: "/chatbot" },
   ];
 
   return (
