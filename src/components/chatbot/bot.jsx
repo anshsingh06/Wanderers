@@ -1,117 +1,3 @@
-// import { useState } from "react";
-// import { MessageCircle, X } from "lucide-react";
-// import axios from "axios";
-
-// export default function ChatBot() {
-//   const [open, setOpen] = useState(true);
-//   const [messages, setMessages] = useState([]);
-//   const [input, setInput] = useState("");
-
-//   const sendMessage = async () => {
-//     if (!input.trim()) return;
-
-//     // Push user message
-//     const newMessages = [...messages, { role: "user", content: input }];
-//     setMessages(newMessages);
-
-//     try {
-//       const res = await axios.post("http://localhost:5000/api/chat", {
-//         message: input,
-//       });
-
-//       if (res.data.reply) {
-//         setMessages((prev) => [
-//           ...prev,
-//           { role: "assistant", content: res.data.reply },
-//         ]);
-//       } else {
-//         setMessages((prev) => [
-//           ...prev,
-//           { role: "assistant", content: "⚠ No reply from server." },
-//         ]);
-//       }
-//     } catch (err) {
-//       console.error("Frontend fetch error:", err);
-//       setMessages((prev) => [
-//         ...prev,
-//         { role: "assistant", content: "⚠ Error connecting to server." },
-//       ]);
-//     }
-
-//     setInput("");
-//   };
-
-//   return (
-//     <div>
-//       <div
-//         className="w-screen h-screen bg-cover bg-center bg-no-repeat"
-//         style={{
-//           backgroundImage:
-//             "url('https://media.istockphoto.com/id/1407983969/photo/aerial-landscape-with-green-hills-river-and-forest.jpg?s=612x612&w=0&k=20&c=Q89WTjFahfIaKi_sxadafVZMhrVkZrtfWyk3co-qldI=')",
-//         }}
-//       ></div>
-
-//       <div className="fixed bottom-4 right-4 z-50">
-//         {!open && (
-//           <button
-//             onClick={() => setOpen(true)}
-//             className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700"
-//           >
-//             <MessageCircle size={24} />
-//           </button>
-//         )}
-
-//         {open && (
-//           <div className="w-80 h-96 bg-white rounded-xl shadow-2xl flex flex-col overflow-hidden border border-gray-200">
-//             <div className="bg-blue-600 text-white px-4 py-2 flex justify-between items-center">
-//               <h2 className="text-sm font-semibold">Jharkhand Tourism Bot</h2>
-//               <button onClick={() => setOpen(false)}>
-//                 <X size={18} />
-//               </button>
-//             </div>
-
-//             {/* Messages */}
-//             <div className="flex-1 p-3 overflow-y-auto space-y-2 text-sm text-black">
-//               {messages.map((msg, idx) => (
-//                 <div
-//                   key={idx}
-//                   className={`p-2 rounded-lg max-w-[80%] ${
-//                     msg.role === "user"
-//                       ? "bg-blue-100 ml-auto text-right"
-//                       : "bg-gray-100 mr-auto"
-//                   }`}
-//                 >
-//                   {msg.content}
-//                 </div>
-//               ))}
-//             </div>
-
-//             {/* Input */}
-//             <div className="border-t p-2 flex">
-//               <input
-//                 type="text"
-//                 value={input}
-//                 onChange={(e) => setInput(e.target.value)}
-//                 onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-//                 placeholder="Ask about Jharkhand tourism..."
-//                 className="flex-1 text-sm text-black border rounded-lg px-2 py-1 focus:outline-none"
-//               />
-//               <button
-//                 onClick={sendMessage}
-//                 className="ml-2 bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 text-sm"
-//               >
-//                 Send
-//               </button>
-//             </div>
-//           </div>
-//         )}
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
 import { useState } from "react";
 import { X } from "lucide-react";
 import axios from "axios";
@@ -164,26 +50,36 @@ export default function ChatBot() {
       </div>
 
       {/* Messages */}
-      <div className="flex-1 p-6 overflow-y-auto space-y-3 text-sm">
-        {messages.length === 0 && (
-          <div className="text-gray-500 text-center mt-10">
-            👋 Welcome! Ask me anything about Jharkhand tourism.
-          </div>
-        )}
+<div className="flex-1 bg-gradient-to-r from-green-900 to-green-700 p-6 overflow-y-auto space-y-3 text-sm">
+  {messages.length === 0 && (
+    <div className="flex flex-col items-center justify-center h-full text-center px-6">
+      <h1 className="text-4xl md:text-5xl font-bold text-white">
+        Discover the Beauty of{" "}
+        <span className="text-yellow-500">Jharkhand</span>
+      </h1>
+      <p className="mt-4 text-lg md:text-xl text-white/90 max-w-2xl">
+        Your AI-powered travel companion for exploring the land of forests,
+        waterfalls, and rich culture
+      </p>
+    </div>
+  )}
 
-        {messages.map((msg, idx) => (
-          <div
-            key={idx}
-            className={`p-3 rounded-lg max-w-[75%] ${
-              msg.role === "user"
-                ? "bg-[#e6f4ea] ml-auto text-right text-black"
-                : "bg-white border mr-auto text-black"
-            }`}
-          >
-            {msg.content}
-          </div>
-        ))}
-      </div>
+  {messages.map((msg, idx) => (
+    <div
+      key={idx}
+      className={`p-3 rounded-lg max-w-[75%] ${
+        msg.role === "user"
+          ? "bg-[#e6f4ea] ml-auto text-right text-black"
+          : "bg-white border mr-auto text-black"
+      }`}
+    >
+      {msg.content}
+    </div>
+  ))}
+</div>
+
+
+
 
       {/* Input Area */}
       <div className="border-t p-4 flex bg-white">
@@ -205,3 +101,5 @@ export default function ChatBot() {
     </div>
   );
 }
+
+
