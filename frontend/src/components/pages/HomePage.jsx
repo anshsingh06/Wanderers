@@ -46,11 +46,16 @@ const HomePage = () => {
 
                         {/* Buttons */}
                         <div className="flex space-x-4 mb-10">
-                            <button className="flex items-center bg-green-700 hover:bg-green-800 px-5 py-3 rounded-md text-sm font-semibold">
+                            <button onClick={()=>{
+                                window.location.href="/itinerary"
+                            }}className="flex items-center bg-green-700 hover:bg-green-800 px-5 py-3 rounded-md text-sm font-semibold">
                                 <Calendar className="w-4 h-4 mr-2" />
                                 PLAN JOURNEY
                             </button>
-                            <button className="flex items-center border border-orange-400 hover:bg-orange-50/20 px-5 py-3 rounded-md text-sm font-semibold text-orange-400">
+                            <button onClick ={() =>{
+                                window.location.href="/hidden-gems"
+                            }} 
+                            className="flex items-center border border-orange-400 hover:bg-orange-50/20 px-5 py-3 rounded-md text-sm font-semibold text-orange-400">
                                 DISCOVER GEMS
                             </button>
                         </div>

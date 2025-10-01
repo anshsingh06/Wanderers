@@ -15,7 +15,7 @@ import Footer from "../ui/Footer";
 import Head from "../ui/Head";
 
 const SafetyPage = () => {
-  const [currentLocation, setCurrentLocation] = useState(null);
+  const [, setCurrentLocation] = useState(null);
   const [locationShared, setLocationShared] = useState(false);
 
   // Function to get current location
