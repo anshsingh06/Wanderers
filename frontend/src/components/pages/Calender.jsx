@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 
 const festivals = [
@@ -38,29 +37,28 @@ export default function FestivalCalendar() {
 
   return (
     <div className="p-6">
+      {/* Page Title */}
       <h1 className="text-3xl font-bold text-center mb-6 flex items-center justify-center gap-2">
         <Calendar className="w-7 h-7 text-orange-600" />
         Jharkhand Festival Calendar
       </h1>
 
-      {/* Calendar Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* Grid of Festivals */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {festivals.map((festival, index) => (
-          <Card
+          <div
             key={index}
-            className="cursor-pointer hover:shadow-xl transition-all"
+            className="bg-white rounded-xl border shadow-md p-4 cursor-pointer hover:shadow-xl transition-all"
             onClick={() => setSelectedFestival(festival)}
           >
-            <CardContent className="p-4">
-              <h2 className="text-lg font-bold text-green-700">{festival.name}</h2>
-              <p className="text-sm text-gray-600">{festival.months}</p>
-              <p className="mt-2 text-xs text-gray-500">{festival.place}</p>
-            </CardContent>
-          </Card>
+            <h2 className="text-lg font-bold text-green-700">{festival.name}</h2>
+            <p className="text-sm text-gray-600">{festival.months}</p>
+            <p className="mt-2 text-xs text-gray-500">{festival.place}</p>
+          </div>
         ))}
       </div>
 
-      {/* Festival Details Modal */}
+      {/* Modal Popup for Festival Details */}
       {selectedFestival && (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
           <div className="bg-white rounded-2xl shadow-xl p-6 w-96 relative">

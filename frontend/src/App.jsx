@@ -11,6 +11,7 @@ import SafetyPage from "./components/pages/SafetyPage";
 import AttractionsPage from "./components/pages/AttractionsPage";
 import CraftsPage from "./components/pages/CraftsPage";
 import Bot from "./components/chatbot/bot";
+import Calendar from "./components/pages/calender";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/AttractionsPage" element={<AttractionsPage/>} />
         <Route path="/CraftsPage" element={<CraftsPage />} />
         <Route path="/chatbot" element={<Bot />} />
+        <Route path="/calendar" element={<Calendar />} />
       </Routes>
     </Router>
   );
