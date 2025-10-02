@@ -65,7 +65,9 @@ const Head = () => {
         </div>
 
         {/* SOS Button */}
-        <button className="cursor-pointer bg-red-600 text-white px-3 py-1 rounded-md text-sm font-semibold hover:bg-red-700">
+        <button onClick={()=>{
+          window.location.href="/safety"
+        }} className="cursor-pointer bg-red-600 text-white px-3 py-1 rounded-md text-sm font-semibold hover:bg-red-700">
           SOS
         </button>
 
