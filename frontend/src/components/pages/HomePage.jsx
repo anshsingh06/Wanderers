@@ -557,7 +557,9 @@ const HomePage = () => {
 
                     {/* Button */}
                     <div className="mt-10">
-                        <button className="flex items-center mx-auto bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-orange-700 transition hover:cursor-pointer hover:scale-105">
+                        <button onClick={()=>{
+                                window.location.href="/calendar"
+                            }}className="flex items-center mx-auto bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-orange-700 transition hover:cursor-pointer hover:scale-105">
                             📅 VIEW FESTIVAL CALENDAR
                         </button>
                     </div>
